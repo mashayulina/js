@@ -1,4 +1,6 @@
-let a=23;
-let b=90;
-+--
-console.log(a,b);
+let c = 4;
+let e = 7;
+e = c-e+e;
+c = c+c-1 
+console.log(c);
+console.log(e)
