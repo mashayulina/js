@@ -6,5 +6,6 @@ while(plate>0&&soup>0){
     plate-=1;
     soup-=0.5;
     i++;
-    console.log(`Мыла осталось ${soup},Грязных тарелок осталось ${plate}`);
+    console.log(`Мыла осталось ${soup}`);
 }
+console.log(`Мыла осталось ${soup},Грязных тарелок осталось ${plate}`);
