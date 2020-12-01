@@ -14,7 +14,7 @@ const filterBooks = (books, author) => books.filter(book => book.author === auth
 console.log(filterBooks(books, 'Пушкин'));
 
 //4
-const sortBooks3 = (books) => books.sort((a, b) => a.pageCount > b.pageCount ? 1 : -1)
+const sortBooks3 = (books) => books.sort((a, b) => a.pageCount === b.pageCount ? 0 : a.pageCount > b.pageCount ? 1 : -1)
 
 console.log(sortBooks3(books));
 
