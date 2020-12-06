@@ -47,3 +47,19 @@ let goods = {
         count: 5
     }
 };
+function getPrice(from, to, obj){ 
+    if (!Number.isInteger(from) && !Number.isInteger(to)) return;
+    let newObj = {};
+    for (let elem in obj) {
+       if (obj[elem].price > from && obj[elem].price <= to) {
+          newObj[elem] = obj[elem];
+ 
+       }
+    }
+    return newObj;
+ }
+ console.log(getPrice(1000, 2500, goods))
+//Функция принимает на вход: from, to и obj:
+//     * from, to - числа, если переданы не числа, необходимо прервать работу функции;
+//     * obj - объект. 
+//  Функция возвращает новый объект с товарами из obj, стоимость которых находится в диапазоне (from;  to]

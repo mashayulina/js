@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-size: 1rem;
+}
+
+img {
+    padding: 0.5rem;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    padding-left: 2rem;
+}
+
+h3 {
+    border-bottom: 3px solid rgb(209, 209, 119);
+}
+
+.card {
+    border: 2px solid rgb(48, 47, 47);
+    background: rgb(214, 142, 178);
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+}
+
+.info {
+    padding: 10px;
+    width: 50%;
+}
+.cats {
+    display: flex;
+    justify-content: space-between;
+}
