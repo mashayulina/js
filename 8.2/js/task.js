@@ -54,23 +54,58 @@ let goods = [
     }
 ];
 
-function generateTable(array) {
-   let table = document.createElement("table");
-   let row = table.insertRow();
-   for (let elem in array[0]) {
-       let th = document.createElement("th");
-       th.innerText = elem;
-       row.append(th);
-   }
-   for (let obj of array) {
-       row = table.insertRow();
-       for (let elem in obj) {
-           let cell = row.insertCell();
-           cell.innerText = obj[elem];
-       }
-   }
-   return table;
+// function generateTable(array) {
+//    let table = document.createElement("table");
+//    let row = table.insertRow();
+//    for (let elem in array[0]) {
+//        let th = document.createElement("th");
+//        th.innerText = elem;
+//        row.append(th);
+//    }
+//    for (let obj of array) {
+//        row = table.insertRow();
+//        for (let elem in obj) {
+//            let cell = row.insertCell();
+//            cell.innerText = obj[elem];
+//        }
+//    }
+//    return table;
+// }
+// let tableArea = document.querySelector(".tables-section");
+// tableArea.append(generateTable(articles));
+// tableArea.append(generateTable(goods));
+
+
+function generateTable(array)
+{
+    const Table = document.createElement('table');
+    const Tr_head = document.createElement('tr');
+
+    Table.append(Tr_head);
+
+    for(let key in array[0])
+    {
+        const Th = document.createElement('th');
+        Th.textContent = key;
+        Tr_head.append(Th);
+    }
+
+    for(let obj of array)
+    {        
+        const Tr = document.createElement('tr');
+        for(let key in obj)
+        {
+            const Td = document.createElement('td');
+            Td.textContent = obj[key];
+            Tr.append(Td);       
+        }
+        Table.append(Tr);     
+    }
+
+
+
+
+    document.querySelector('.table-section').append(Table);
 }
-let tableArea = document.querySelector(".tables-section");
-tableArea.append(generateTable(articles));
-tableArea.append(generateTable(goods));
+
+generateTable(articles);
